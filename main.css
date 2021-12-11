@@ -1,0 +1,31 @@
+th{
+  margin: 5px;
+  width: 805px;
+  height: 60px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  text-align: right;
+  border-radius: 0;
+}
+
+table{
+  text-align: center;
+}
+
+button{
+  width: 200px;
+  height: 60px;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 15px;
+  background-color: #cdcdcd
+}
+
+button:hover{
+  border: solid 2px blue;
+}
+
+.large{
+  width: 405px;
+}
