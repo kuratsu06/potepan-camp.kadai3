@@ -1,27 +1,32 @@
-#result {
-  width: 600px;
-  height: 50px;
-  background-color: black;
-  color: white;
-  padding-right: 10px;
-  text-align: right;
-  font-size: 40px;
-  font-weight: 100;
+#result{
+ width: 600px;
+ height: 50px;
+ text-align: right;
+ background-color: black;
+ color: white;
+ font-size: 35px;
 }
 
-button {
+.nomal {
   width: 150px;
   height: 50px;
+  border-radius: 15px;
   background-color: #dedede;
   font-size: 30px;
-  font-weight: 100;
-  border-radius: 10px;
 }
 
 .large {
-  width: 305px;
+  width: 300px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #dedede;
+  font-size: 30px;
 }
 
-button:active {
+.nomal:active {
+  border-color: blue;
+}
+
+.large:active {
   border-color: blue;
 }

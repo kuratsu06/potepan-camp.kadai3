@@ -1,28 +1,28 @@
-function clickbutton(target) {
-  let result = document.getElementById("result");
-  let target_value = target.innerHTML;
+let result = document.getElementById("result");
+
+function num_btn(num) {
   
-  if (target_value == "AC") {
-    result.innerHTML = "0"
-  } else if (target_value == "=") {
-    result.innerHTML = eval(result.innerHTML)
+ if (result.value == "0") {
+   result.value = num.value;
   } else {
-    if (result.innerHTML == "0") {
-      result.innerHTML = target_value
-    } else {
-      result.innerHTML += target_value
-    }
+   result.value += num.value;
   }
 }
 
-function cal() {
-  let result_value = document.getElementById("result");
-  let cal_btn = document.getElementById("calculation");
+function calc_btn(calc) {
   
-  if (result_value.textContent.slice(-1) == "+") {
-    const f = result_value.textContent.slice(0, -1)
-    result_value.textContent = f + cal_btn
+  if (result.value.slice(-1) == "+" || "-" || "*" || "/") {
+    const f = result.value.slice(0, -1);
+    result.value = f + calc.value;
   } else {
-    result_value.textContent += cal_btn
+    result.value += calc.value;
   }
+}
+
+function clear_btn() {
+  result.value = "0";
+}
+
+function equal_btn() {
+  result.value = eval(result.value);
 }
