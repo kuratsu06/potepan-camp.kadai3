@@ -1,13 +1,29 @@
 let result = document.getElementById("result");
 
 function calc_btn(calc) {
-
- if (result.value.slice(-1) == "+" || "-" || "*" || "/") {
-  const answer = result.value + calc.value;
-  const footSlice = answer.slice(0, -1);
-  const display = footSlice + calc.value;
-  console.log(display);
-  }
+ let display = result.value.slice(-1);
+ let footSlice = result.value.slice(0, -1);
+ 
+ switch (display) {
+  case '+':
+    result.value = footSlice + calc.value; 
+   break;
+  
+  case '-':
+    result.value = footSlice + calc.value; 
+   break;
+   
+  case '*':
+    result.value = footSlice + calc.value; 
+   break;
+   
+  case '/':
+    result.value = footSlice + calc.value; 
+   break;
+  
+  default:
+   result.value += calc.value;
+ }
 }
 
 function num_btn(num) {
